@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sangrah InfraTech - Builder Aggregation & Supply Ecosystem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        
+        /* Modern Dark Theme Gradients */
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            border-color: rgba(249, 115, 22, 0.5);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .pipeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #3b82f6, #f97316);
+            transform: translateX(-50%);
+            z-index: 0;
+            opacity: 0.3;
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 30px rgba(249, 115, 22, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-300 antialiased selection:bg-orange-600 selection:text-white">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-slate-950/80 backdrop-blur-md border-b border-white/5">
+        <div class="container mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center text-white shadow-lg shadow-blue-500/20">
+                    <i class="fas fa-city"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-white tracking-wide">Sangrah</h1>
+                    <span class="text-[10px] text-orange-500 font-bold tracking-[0.3em] uppercase block">InfraTech</span>
+                </div>
+            </div>
+            <a href="#join" class="px-5 py-2 text-xs uppercase tracking-widest font-bold border border-white/10 rounded-full hover:bg-white hover:text-slate-900 transition duration-300">
+                Concept Phase
+            </a>
+        </div>
+    </nav>
+
+    <header class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600 rounded-full blur-[150px] opacity-10"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-orange-600 rounded-full blur-[150px] opacity-10"></div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center pt-20">
+            <div class="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-300 text-xs font-bold uppercase tracking-widest">
+                <span class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span> Developing for Tier-2 Cities
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Verified Builders.<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500 text-glow">Genuine Materials.</span><br>
+                One Platform.
+            </h1>
+            
+            <p class="text-lg md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+                We aggregate the best <strong>Construction Teams</strong> and supply the <strong>Materials</strong> they need to build your home. 
+                <br>A unified ecosystem for total peace of mind.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#pipeline" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-500 transition shadow-lg shadow-blue-600/20">
+                    How It Works
+                </a>
+                <a href="#join" class="bg-transparent border border-white/20 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition">
+                    Join Waitlist
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 bg-slate-950 border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white">Construction is Broken</h2>
+                <p class="text-slate-400 mt-2">Managing labor and materials separately leads to chaos.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-card p-8 rounded-2xl">
+                    <i class="fas fa-search-location text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Finding Builders is Hard</h3>
+                    <p class="text-slate-400 text-sm">Most people rely on random referrals. No background checks, no past work verification.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl">
+                    <i class="fas fa-cubes text-4xl text-orange-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Material Pilferage</h3>
+                    <p class="text-slate-400 text-sm">You pay for Grade-A Cement, but the site receives Grade-B. Builders often cut corners on material.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl">
+                    <i class="fas fa-file-contract text-4xl text-red-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Money Risk</h3>
+                    <p class="text-slate-400 text-sm">Builders ask for huge advances. If they leave halfway, your money is gone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ecosystem" class="py-24 bg-slate-900 relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                
+                <div class="md:w-1/2">
+                    <span class="text-blue-500 font-bold uppercase tracking-widest text-sm">The Sangrah Model</span>
+                    <h2 class="text-4xl font-bold text-white mt-2 mb-6">Aggregating Talent.<br>Facilitating Supply.</h2>
+                    <p class="text-slate-400 mb-6 leading-relaxed">
+                        We are not just a contractor list, and we are not just a hardware store. We are an <strong>End-to-End Aggregator</strong>.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-blue-900/50 rounded-full flex items-center justify-center text-blue-400 text-xl shrink-0 border border-blue-500/20">
+                                <i class="fas fa-users-cog"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">1. Builder Aggregation</h4>
+                                <p class="text-sm text-slate-400">We verify and list the best local contractors, masons, and labor teams. We rate them on previous projects.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-orange-900/50 rounded-full flex items-center justify-center text-orange-400 text-xl shrink-0 border border-orange-500/20">
+                                <i class="fas fa-truck-loading"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">2. Material Facilitation</h4>
+                                <p class="text-sm text-slate-400">For our active sites, we source materials directly from verified hubs. This ensures the builder has the right tools to build *your* home.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 relative">
+                    <div class="relative glass-card p-8 rounded-3xl border-t-4 border-t-blue-500">
+                        <div class="absolute -top-5 -right-5 w-20 h-20 bg-orange-500 rounded-full blur-2xl opacity-20"></div>
+                        
+                        <div class="text-center space-y-8">
+                            <div class="bg-slate-800 p-4 rounded-xl inline-block w-full">
+                                <i class="fas fa-home text-3xl text-white mb-2"></i>
+                                <div class="font-bold text-white">You (Homeowner)</div>
+                            </div>
+                            
+                            <div class="h-8 w-1 bg-gradient-to-b from-slate-800 to-blue-600 mx-auto"></div>
+                            
+                            <div class="bg-blue-600 p-4 rounded-xl w-full shadow-lg shadow-blue-600/20">
+                                <div class="font-bold text-white text-xl">SANGRAH PLATFORM</div>
+                                <div class="text-xs text-blue-200">The Trust Layer (Escrow & Tech)</div>
+                            </div>
+
+                            <div class="flex justify-center gap-1">
+                                <div class="h-8 w-1 bg-gradient-to-b from-blue-600 to-slate-800 rotate-12 origin-top"></div>
+                                <div class="h-8 w-1 bg-gradient-to-b from-blue-600 to-orange-600 -rotate-12 origin-top"></div>
+                            </div>
+
+                            <div class="flex gap-4">
+                                <div class="bg-slate-800 p-4 rounded-xl w-1/2 border border-blue-500/30">
+                                    <i class="fas fa-hard-hat text-2xl text-blue-400 mb-2"></i>
+                                    <div class="font-bold text-slate-200 text-sm">Verified Builder</div>
+                                </div>
+                                <div class="bg-slate-800 p-4 rounded-xl w-1/2 border border-orange-500/30">
+                                    <i class="fas fa-layer-group text-2xl text-orange-400 mb-2"></i>
+                                    <div class="font-bold text-slate-200 text-sm">Verified Material</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pipeline" class="py-24 bg-slate-950 relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold text-white">The Workflow</h2>
+                <p class="text-slate-400 mt-2">How we make construction seamless.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto relative">
+                <div class="pipeline-line hidden md:block"></div>
+
+                <div class="flex flex-col md:flex-row items-center justify-between mb-16 relative">
+                    <div class="md:w-5/12 text-center md:text-right p-6 glass-card rounded-2xl">
+                        <h3 class="text-xl font-bold text-white mb-2">1. Select Verified Builder</h3>
+                        <p class="text-slate-400 text-sm">Browse ratings and past projects of local builders. Select the one that fits your budget.</p>
+                    </div>
+                    <div class="w-12 h-12 bg-slate-800 rounded-full border-4 border-blue-600 z-10 flex items-center justify-center font-bold text-white shrink-0 my-4 md:my-0">1</div>
+                    <div class="md:w-5/12 md:pl-8 text-center md:text-left">
+                        <span class="text-blue-500 font-mono text-xs">PHASE: AGGREGATION</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row-reverse items-center justify-between mb-16 relative">
+                    <div class="md:w-5/12 text-center md:text-left p-6 glass-card rounded-2xl border-l-4 border-blue-500">
+                        <h3 class="text-xl font-bold text-blue-400 mb-2">2. Escrow Security</h3>
+                        <p class="text-slate-400 text-sm">Deposit project funds into the App. The builder sees the money is there, but can't touch it yet. Trust established.</p>
+                    </div>
+                    <div class="w-12 h-12 bg-slate-800 rounded-full border-4 border-blue-600 z-10 flex items-center justify-center font-bold text-white shrink-0 my-4 md:my-0">2</div>
+                    <div class="md:w-5/12 md:pr-8 text-center md:text-right">
+                        <span class="text-blue-500 font-mono text-xs">PHASE: SECURITY</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center justify-between mb-16 relative">
+                    <div class="md:w-5/12 text-center md:text-right p-6 glass-card rounded-2xl border-r-4 border-orange-500">
+                        <h3 class="text-xl font-bold text-orange-400 mb-2">3. Integrated Material Supply</h3>
+                        <p class="text-slate-400 text-sm">We coordinate the material delivery to the site. This ensures ease for you and quality for the structure.</p>
+                    </div>
+                    <div class="w-12 h-12 bg-slate-800 rounded-full border-4 border-orange-600 z-10 flex items-center justify-center font-bold text-white shrink-0 my-4 md:my-0">3</div>
+                    <div class="md:w-5/12 md:pl-8 text-center md:text-left">
+                        <span class="text-orange-500 font-mono text-xs">PHASE: PROCUREMENT</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row-reverse items-center justify-between relative">
+                    <div class="md:w-5/12 text-center md:text-left p-6 glass-card rounded-2xl">
+                        <h3 class="text-xl font-bold text-green-400 mb-2">4. Milestone & Release</h3>
+                        <p class="text-slate-400 text-sm">Builder completes the work. You verify. Payment is released. Seamless.</p>
+                    </div>
+                    <div class="w-12 h-12 bg-slate-800 rounded-full border-4 border-green-600 z-10 flex items-center justify-center font-bold text-white shrink-0 my-4 md:my-0">4</div>
+                    <div class="md:w-5/12 md:pr-8 text-center md:text-right">
+                        <span class="text-green-500 font-mono text-xs">PHASE: COMPLETION</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="join" class="py-24 bg-slate-900 border-t border-white/5">
+        <div class="container mx-auto px-6 text-center max-w-2xl">
+            <i class="fas fa-drafting-compass text-5xl text-blue-500 mb-6"></i>
+            <h2 class="text-4xl font-bold text-white mb-4">Under Development</h2>
+            <p class="text-slate-400 mb-8">
+                We are currently building the network of trusted builders and material partners in Jaipur.
+                <br>Sign up to get notified when we launch.
+            </p>
+
+            <form id="contactForm" class="flex flex-col sm:flex-row gap-4">
+                <input type="email" id="userEmail" name="user_email" placeholder="Enter your email address" required class="flex-1 bg-slate-800 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-blue-500 transition">
+                <button type="submit" id="submitBtn" class="bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-600/25">
+                    Notify Me
+                </button>
+            </form>
+            <div id="formMessage" class="mt-4 text-sm hidden"></div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-500 py-10 border-t border-white/5">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="text-white font-bold text-lg">Sangrah</span>
+                <span class="text-[10px] text-orange-500 font-bold uppercase ml-1">InfraTech</span>
+            </div>
+            <div class="text-sm">
+                &copy; 2026 Concept Display. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY"); // You'll get this from EmailJS
+        })();
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('formMessage');
+            const userEmail = document.getElementById('userEmail').value;
+            
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Send email using EmailJS
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+                user_email: userEmail,
+                to_email: "as7488896@gmail.com", // Replace with your Gmail
+                message: "New inquiry from Sangrah InfraTech website",
+                from_name: "Website Visitor"
+            })
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                formMessage.textContent = 'Thank you! We\'ll notify you when we launch.';
+                formMessage.className = 'mt-4 text-sm text-green-400';
+                formMessage.classList.remove('hidden');
+                document.getElementById('userEmail').value = '';
+            })
+            .catch(function(error) {
+                console.log('FAILED...', error);
+                // Fallback: open Gmail compose
+                const subject = encodeURIComponent('Sangrah InfraTech - New Inquiry');
+                const body = encodeURIComponent(`New inquiry from: ${userEmail}\n\nInterested in Sangrah InfraTech services.`);
+                window.location.href = `mailto:as7488896@gmail.com?subject=${subject}&body=${body}`;
+                
+                formMessage.textContent = 'Opening your email client...';
+                formMessage.className = 'mt-4 text-sm text-blue-400';
+                formMessage.classList.remove('hidden');
+            })
+            .finally(function() {
+                submitBtn.textContent = 'Notify Me';
+                submitBtn.disabled = false;
+            });
+        });
+    </script>
+
+</body>
+</html>
